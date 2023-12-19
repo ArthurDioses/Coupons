@@ -1,0 +1,1 @@
+package com.dioses.coupons.common.adapters

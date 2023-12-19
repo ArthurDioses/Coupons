@@ -2,6 +2,7 @@ package com.dioses.coupons
 
 import android.app.Application
 import androidx.room.Room
+import com.dioses.coupons.common.dataAccess.CouponDatabase
 
 class CouponApplication : Application() {
 

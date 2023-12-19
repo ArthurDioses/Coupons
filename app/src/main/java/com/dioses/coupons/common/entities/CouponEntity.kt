@@ -1,4 +1,4 @@
-package com.dioses.coupons
+package com.dioses.coupons.common.entities
 
 import androidx.room.Entity
 import androidx.room.Index
