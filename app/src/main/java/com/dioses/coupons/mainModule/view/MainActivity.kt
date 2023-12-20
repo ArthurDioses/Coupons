@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupObservers() {
+        /*
         mainViewModel.getResult().observe(this) { coupon ->
             if (coupon == null) {
                 binding.textInputLayoutDescription.hint = getString(R.string.main_hint_description)
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity() {
                 binding.buttonCreate.visibility = if (coupon.isActive) View.GONE else View.VISIBLE
             }
         }
+         */
 
         mainViewModel.getSnackbarMsg().observe(this) { message ->
             Snackbar.make(binding.root, message, Snackbar.LENGTH_SHORT).show()
@@ -53,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupButtons() {
         binding.buttonConsult.setOnClickListener {
-            mainViewModel.consultCouponByCode(binding.editTextCoupon.text.toString())
+            //mainViewModel.consultCouponByCode(binding.editTextCoupon.text.toString())
             hideKeyboard(this, binding.root)
         }
         binding.buttonCreate.setOnClickListener {
@@ -61,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                 code = binding.editTextCoupon.text.toString(),
                 description = binding.editTextDescription.text.toString()
             )
-            mainViewModel.saveCoupon(coupon)
+            //mainViewModel.saveCoupon(coupon)
             hideKeyboard(this, binding.root)
         }
     }
