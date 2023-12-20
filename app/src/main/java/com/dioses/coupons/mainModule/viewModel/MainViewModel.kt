@@ -29,7 +29,7 @@ class MainViewModel : ViewModel() {
             try {
                 repository.saveCoupon(couponEntity)
                 consultCouponByCode(couponEntity.code)
-                snackbarMsg.value = R.string.main_save_sucess
+                snackbarMsg.value = R.string.main_save_success
             } catch (e: Exception) {
                 snackbarMsg.value = getMessageErrorByCode(e.message)
             }
