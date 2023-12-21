@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:onClick="@{() ->viewModel.saveCoupon()}"
             android:text="@string/main_button_create"
-            android:visibility="gone"
+            app:isGone="@{isActive}"
             app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal"
             app:layout_constraintEnd_toStartOf="@id/button_consult"
             app:layout_constraintStart_toStartOf="parent"
