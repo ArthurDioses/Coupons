@@ -3,6 +3,7 @@
     <string name="main_button_consult">Consultar</string>
     <string name="main_button_create">Crear cupón</string>
     <string name="main_text_title">Bienvenido, ingrese su cupón y a continuación presionen consultar.</string>
+    <string name="main_text_title_add_coupon">Cupón disponible, añade la descripción y pulsa el botón de Crear</string>
     <string name="main_hint_coupon">cupón</string>
     <string name="main_hint_description">Descripción</string>
     <string name="error_unique_code">Este cupón ya existe, agregue un código diferente</string>
