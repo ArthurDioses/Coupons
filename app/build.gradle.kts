@@ -48,6 +48,7 @@ val constraint_version = "2.1.4"
 val room_version = "2.6.1"
 val lifecycle_version = "2.6.2"
 val coroutines_version = "1.7.1"
+val activity_version = "1.8.2"
 
 dependencies {
 
@@ -73,4 +74,8 @@ dependencies {
     ksp("androidx.room:room-compiler:$room_version")
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation("androidx.room:room-ktx:$room_version")
+
+    // Kotlin
+    implementation("androidx.activity:activity-ktx:$activity_version")
+
 }
