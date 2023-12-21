@@ -1,7 +1,9 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("com.google.devtools.ksp") version "1.9.10-1.0.13"
+    id("com.google.devtools.ksp")
+    kotlin("kapt")
+
 }
 
 android {
@@ -11,7 +13,7 @@ android {
     defaultConfig {
         applicationId = "com.dioses.coupons"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -35,9 +37,8 @@ android {
         jvmTarget = "1.8"
     }
 
-    buildFeatures{
-        //viewBinding = true
-        dataBinding = true
+    dataBinding{
+        enable = true
     }
 }
 
