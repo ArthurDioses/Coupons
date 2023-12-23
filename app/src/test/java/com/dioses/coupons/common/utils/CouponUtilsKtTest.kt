@@ -18,4 +18,12 @@ class CouponUtilsKtTest {
         assertFalse(validateTextCode(code))
     }
 
+    @Test
+    fun validateTextCodeMinLengthTest() {
+        val code = "HOLA"
+        val code2 = "HOLA2"
+        assertFalse(validateTextCode(code))
+        assertTrue(validateTextCode(code2))
+    }
+
 }
