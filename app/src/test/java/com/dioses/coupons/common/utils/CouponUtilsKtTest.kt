@@ -26,4 +26,12 @@ class CouponUtilsKtTest {
         assertTrue(validateTextCode(code2))
     }
 
+    @Test
+    fun validateTextCodeMaxLengthTest() {
+        val code = "HOLAMAX"
+        val code2 = "HOLAPASOELMAX"
+        assertTrue(validateTextCode(code))
+        assertFalse(validateTextCode(code2))
+    }
+
 }
