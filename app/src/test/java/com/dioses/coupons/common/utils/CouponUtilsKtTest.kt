@@ -3,6 +3,8 @@ package com.dioses.coupons.common.utils
 import junit.framework.TestCase.assertFalse
 import junit.framework.TestCase.assertTrue
 import org.junit.Test
+import com.dioses.coupons.R
+import junit.framework.TestCase.assertEquals
 
 class CouponUtilsKtTest {
 
@@ -34,4 +36,11 @@ class CouponUtilsKtTest {
         //assertFalse(validateTextCode(code2))
     }
 
+    @Test
+    fun getMsgByCodeNullTest() {
+        val errorCode = null
+        val expectedCode = R.string.error_unknown
+        val result = getMessageErrorByCode(errorCode)
+        assertEquals(expectedCode, result)
+    }
 }
