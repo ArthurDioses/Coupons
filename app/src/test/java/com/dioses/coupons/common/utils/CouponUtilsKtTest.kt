@@ -41,6 +41,14 @@ class CouponUtilsKtTest {
         val errorCode = null
         val expectedCode = R.string.error_unknown
         val result = getMessageErrorByCode(errorCode)
-        assertEquals(expectedCode, result)
+        assertEquals("Error al evaluar un null", expectedCode, result)
+    }
+
+    @Test
+    fun getMsgErrorByCodeExistTest() {
+        val errorCode = Constants.ERROR_EXIST
+        val expectedCode = R.string.error_unique_code
+        val result = getMessageErrorByCode(errorCode)
+        assertEquals("Error al evaluar un cupón existente", expectedCode, result)
     }
 }
