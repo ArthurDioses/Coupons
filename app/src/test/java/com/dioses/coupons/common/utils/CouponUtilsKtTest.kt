@@ -5,6 +5,7 @@ import junit.framework.TestCase.assertTrue
 import org.junit.Test
 import com.dioses.coupons.R
 import junit.framework.TestCase.assertEquals
+import org.junit.Assert.assertNotEquals
 
 class CouponUtilsKtTest {
 
@@ -50,5 +51,14 @@ class CouponUtilsKtTest {
         val expectedCode = R.string.error_unique_code
         val result = getMessageErrorByCode(errorCode)
         assertEquals("Error al evaluar un cupón existente", expectedCode, result)
+    }
+
+    @Test
+    fun getMsgErrorByCodeLengthTest() {
+        val errorCode = Constants.ERROR_LENGTH
+        val expectedCode = R.string.error_invalid_length
+        val result = getMessageErrorByCode(errorCode)
+        assertEquals("Error al evaluar la longitud válida", expectedCode, result)
+        assertNotEquals("El recurso no existe", -1, result)
     }
 }
