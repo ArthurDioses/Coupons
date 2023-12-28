@@ -4,8 +4,10 @@ import junit.framework.TestCase.assertFalse
 import junit.framework.TestCase.assertTrue
 import org.junit.Test
 import com.dioses.coupons.R
+import com.dioses.coupons.common.entities.CouponEntity
 import junit.framework.TestCase.assertEquals
 import org.junit.Assert.assertNotEquals
+import org.junit.Assert.assertNotNull
 
 class CouponUtilsKtTest {
 
@@ -60,5 +62,11 @@ class CouponUtilsKtTest {
         val result = getMessageErrorByCode(errorCode)
         assertEquals("Error al evaluar la longitud válida", expectedCode, result)
         assertNotEquals("El recurso no existe", -1, result)
+    }
+
+    @Test
+    fun checkNotNullCouponTest() {
+        val coupon = CouponEntity(code = "ANDROID", description = "Cursos a $9.99 USD")
+        assertNotNull(coupon)
     }
 }
