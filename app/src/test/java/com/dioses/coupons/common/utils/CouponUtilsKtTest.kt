@@ -10,6 +10,7 @@ import junit.framework.TestCase.assertNull
 import org.junit.Assert.assertArrayEquals
 import org.junit.Assert.assertNotEquals
 import org.junit.Assert.assertNotNull
+import java.util.Arrays
 
 class CouponUtilsKtTest {
 
@@ -79,10 +80,18 @@ class CouponUtilsKtTest {
         assertArrayEquals("Los arreglos deberían coincidir, revise sus elementos.", bNames, aNames)
     }
 
-
     @Test
     fun checkNullCouponTest() {
         val coupon = null
         assertNull("El cupón debería ser null", coupon)
     }
+
+    @Test
+    fun checkGroupFailTest() {
+        val aNames = arrayOf("Arthur", "Felipes", "Jose") //valor actual
+        val bNames = arrayOf("Arthur", "Felipe", "Jose") //valor esperado
+        //assertFalse("Los arreglos no deberían coincidir, revise sus elementos.",aNames.contentEquals(bNames))
+        assertNotEquals("Estos arreglos coinciden", aNames, bNames)
+    }
+
 }
