@@ -6,6 +6,7 @@ import org.junit.Test
 import com.dioses.coupons.R
 import com.dioses.coupons.common.entities.CouponEntity
 import junit.framework.TestCase.assertEquals
+import org.junit.Assert.assertArrayEquals
 import org.junit.Assert.assertNotEquals
 import org.junit.Assert.assertNotNull
 
@@ -67,6 +68,13 @@ class CouponUtilsKtTest {
     @Test
     fun checkNotNullCouponTest() {
         val coupon = CouponEntity(code = "ANDROID", description = "Cursos a $9.99 USD")
-        assertNotNull(coupon)
+        assertNotNull("El cupón no debería ser null", coupon)
+    }
+
+    @Test
+    fun checkGroupSuccessTest() {
+        val aNames = arrayOf("Arthur", "Felipe", "Jose") //valor actual
+        val bNames = arrayOf("Arthur", "Felipe", "Jose") //valor esperado
+        assertArrayEquals("Los arreglos deberían coincidir, revise sus elementos.", bNames, aNames)
     }
 }
